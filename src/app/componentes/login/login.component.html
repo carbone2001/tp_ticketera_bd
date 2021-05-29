@@ -1,0 +1,10 @@
+<div style="max-width: 1000px;" class="center">
+    <h1>Iniciar Sesión como:</h1>
+    <button (click)="onClickOption('tickets')" routerLink="/incidentes" class="btn">Empleado (encargado tickets)</button>
+    <br>
+    <br>
+    <button (click)="onClickOption('empleado')" routerLink="/empleados/tickets" class="btn">Empleado (servicio tecnico)</button>
+    <br>
+    <br>
+    <button (click)="onClickOption('cliente')" routerLink="/clientes/tickets" class="btn">Cliente</button>
+</div>

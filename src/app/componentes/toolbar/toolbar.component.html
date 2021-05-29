@@ -1,0 +1,12 @@
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<div *ngIf="toolbarSvc.mostrar" class="topnav" id="myTopnav">
+    <button *ngIf="toolbarSvc.btnVolver" (click)="back()" class="btn"><span class="material-icons">arrow_back_ios</span><label class="label">Volver</label></button>
+    <button *ngIf="toolbarSvc.btnIncidentes" (click)="optionSelected('incidentes')" routerLink="/incidentes" [class]="selected == 'incidentes' ? 'btn active' : 'btn'">Incidentes</button>
+    <button *ngIf="toolbarSvc.btnAtencion" (click)="optionSelected('atencion')" routerLink="/atencion" [class]="selected == 'atencion' ? 'btn active' : 'btn'">Atención</button>
+    <button *ngIf="toolbarSvc.btnDatosZonales" (click)="optionSelected('datoszonales')" routerLink="/datosZonales" [class]="selected == 'datoszonales' ? 'btn active' : 'btn'">Datos zonales</button>
+    <button *ngIf="toolbarSvc.btnClientes" (click)="optionSelected('clientes')" routerLink="/clientes/info" [class]="selected == 'clientes' ? 'btn active' : 'btn'">Clientes</button>
+    <!-- <button (click)="optionSelected('cargarticket')" routerLink="/ticket/formulario" [class]="selected == 'cargarticket' ? 'btn active' : 'btn'">Agregar Ticket</button> -->
+    <label class="title">TP TICKETERA</label>
+</div>

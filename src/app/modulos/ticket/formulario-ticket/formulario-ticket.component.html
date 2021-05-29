@@ -1,0 +1,92 @@
+<div style="max-width: 1000px;" class="center">
+    <h1>{{titulo}}</h1>
+
+    <!-- o	Razón (valores)
+	Desperfecto
+	Cambio de plan
+	Dar de baja
+	Dar de alta
+o	Derivaciones (array de objetos)
+	Área
+	Empleado (dni)
+	Fecha (tomar en cuenta la fecha más reciente)
+	Solución
+o	Cliente (solo dni)
+o	Estado (valores)
+	Resuelto
+	Pendiente
+o	fecha -->
+<table>
+    <tr *ngIf="razon">
+        <td>
+            <label>Razón: </label>
+        </td>
+        <td>
+            <select (change)="razonChange($event)" class="select">
+                <option value="sin-seleccion">Seleccione una opcion</option>
+                <option value="desperfecto">Desperfecto</option>
+                <option value="dar-baja">Dar de baja servicio</option>
+                <option value="dar-alta-plan">Solicitar un plan</option>
+                <option value="dar-baja-plan">Dar de baja un plan</option>
+            </select>
+        </td>
+    </tr>
+    <tr *ngIf="listaDePlanes">
+        <td colspan="2">
+            <table style="position:relative; width:100%;">
+                <tr>
+                    <th>Tipo</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <td style="float: left;"><input name="tipo" value="normal" type="radio">Normal</td>
+                    <td>$1000</td>
+                    <td>36 Canales</td>
+                </tr>
+                <tr>
+                    <td style="float: left;"><input name="tipo" value="SuperPack1" type="radio">SuperPack1</td>
+                    <td>$1200</td>
+                    <td>48 Canales</td>
+                </tr>
+                <tr>
+                    <td style="float: left;"><input name="tipo" value="SuperPackFull" type="radio">SuperPackFull</td>
+                    <td>$1400</td>
+                    <td>56 Canales</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr *ngIf="derivar">
+        <td>
+            <label>Derivar: </label>
+        </td>
+        <td>
+            <select class="select">
+                <option value="atencion-cliente">Atencion al Cliente</option>
+                <option value="servicio-tecnico">Servicio Técnico</option>
+                <option value="servicios-financieros">Servicios Financieros</option>
+            </select>
+        </td>
+    </tr>
+    <tr *ngIf="estado">
+        <td>
+            <label>Estado: </label>
+        </td>
+        <td>
+            <select class="select">
+                <option value="resuelto">Resuelto</option>
+                <option value="pendiente">Pendiente</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button class="btn">Enviar</button>
+        </td>
+    </tr>
+</table>
+
+
+    
+</div>

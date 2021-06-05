@@ -1,21 +1,17 @@
 <div style="max-width: 1000px;" class="center">
-    <h1>Lista de Incidentes/Desperfectos</h1>
+    <h1>Lista de Desperfectos</h1>
     
     <div class="container">
-        <h2>[Nombre de desperfecto]</h2>
+        <h2>Cantidad por Localidad</h2>
         <div class="card">
             <table style="width: 100%;">
                 <tr>
                     <th>Lugares</th>
                     <th>Cada cuanto</th>
                 </tr>
-                <tr>
-                    <td>Avellaneda</td>
-                    <td>23/Año</td>
-                </tr>
-                <tr>
-                    <td>Quilmes</td>
-                    <td>7/Año</td>
+                <tr *ngFor="let ticket of listaTickets">
+                    <td>{{ticket._id}}</td>
+                    <td>{{ticket.cantidadTickets}}</td>
                 </tr>
             </table>
         </div>

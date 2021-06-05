@@ -11,6 +11,7 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { TicketModule } from './modulos/ticket/ticket.module';
 import { EmpleadosModule } from './modulos/empleados/empleados.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { EmpleadosModule } from './modulos/empleados/empleados.module';
     DatosZonalesModule,
     ClientesModule,
     TicketModule,
-    EmpleadosModule
+    EmpleadosModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

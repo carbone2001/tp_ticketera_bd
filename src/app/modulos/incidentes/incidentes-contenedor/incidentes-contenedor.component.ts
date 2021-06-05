@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {BaseDeDatosService} from '../../../servicios/base-de-datos.service';
 @Component({
   selector: 'incidentes-contenedor',
   templateUrl: './incidentes-contenedor.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncidentesContenedorComponent implements OnInit {
 
-  constructor() { }
+  listaTickets = [];
+  constructor(
+    private bd:BaseDeDatosService
+  ) { }
 
   ngOnInit(): void {
+    this.bd.generateGetRequest("ticket/desperfectosPorLocalidades",(value)=>{
+      this.listaTickets = value;
+    })
   }
 
 }

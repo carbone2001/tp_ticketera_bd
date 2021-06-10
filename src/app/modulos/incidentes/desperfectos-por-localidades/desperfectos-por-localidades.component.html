@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Cantidad de desperfectos por localidad:</h2>
+    <button (click)="buscar()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>Localidad</th>
+                <th>Cantidad de desperfectos</th>
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item._id}}</td>
+                <td>{{item.cantidadTickets}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

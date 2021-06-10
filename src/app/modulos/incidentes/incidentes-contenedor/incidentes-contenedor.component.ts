@@ -8,14 +8,10 @@ import {BaseDeDatosService} from '../../../servicios/base-de-datos.service';
 export class IncidentesContenedorComponent implements OnInit {
 
   listaTickets = [];
-  constructor(
-    private bd:BaseDeDatosService
-  ) { }
+  
+  constructor() { }
 
   ngOnInit(): void {
-    this.bd.generateGetRequest("ticket/desperfectosPorLocalidades",(value)=>{
-      this.listaTickets = value;
-    })
   }
 
 }

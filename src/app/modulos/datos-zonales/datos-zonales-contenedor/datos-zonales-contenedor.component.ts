@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AreaService } from '../../../servicios/area.service';
 @Component({
   selector: 'datos-zonales-contenedor',
   templateUrl: './datos-zonales-contenedor.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosZonalesContenedorComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

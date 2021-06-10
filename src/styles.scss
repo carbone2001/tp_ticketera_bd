@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;wght@300;500;700&display=swap');
 
+.lbl-titulo-lista{
+    font-weight: 600;
+    font-size: 18px;
+}
+
 .btn{
     background-color: #0d56b6;
     color: white;
@@ -11,6 +16,10 @@
     font-size: 21px;
     font-weight: 200;
     transition: all 0.5s;
+}
+
+.margin{
+    margin-left: 10px;
 }
 
 .btn:hover{
@@ -31,7 +40,7 @@
 
 .active{
     transition: all 0.5s;
-    box-shadow: 0px 5px 10px #646464;
+    box-shadow: 0px 0px 10px #0084ff;
 }
 
 *{

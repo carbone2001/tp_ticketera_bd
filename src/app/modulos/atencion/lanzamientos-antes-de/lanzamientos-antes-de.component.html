@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Planes lanzados antes de una fecha:</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Fecha: </label>
+        <button (click)="fecha = 1609339768" [class]="fecha == 1609339768 ? 'btn margin active' : 'btn margin'">2020-12-30</button>
+        <button (click)="fecha = 1625511471" [class]="fecha == 1625511471 ? 'btn margin active' : 'btn margin'">2021-07-05</button>
+    </div>
+    <br>
+    <br>
+    <button (click)="buscar()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+
+            <!-- _id: "$cliente.dni",
+            nombre: { "$first": "$cliente.nombre" },
+            apellido: { "$first": "$cliente.apellido" },
+            cantidadTickets: { $sum: 1 }, -->
+            <tr>
+                <th>Nombre</th>
+                <th>Cantidad Canales</th>
+                <th>Fecha de lanzamiento</th>
+                <!-- <th>Cantidad Tickets</th> -->
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item.tipo}}</td>
+                <td>{{item.cantidad_canales}}</td>
+                <td>{{parseDate(item.fecha_lanzamiento)}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

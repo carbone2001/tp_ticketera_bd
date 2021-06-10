@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ToolbarService {
 
   mostrar = true;
-  btnVolver = true;
+  btnVolver = false;
   btnIncidentes = true;
   btnAtencion = true;
   btnDatosZonales = true;

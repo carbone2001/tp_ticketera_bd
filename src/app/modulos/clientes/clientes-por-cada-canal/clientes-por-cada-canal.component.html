@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Cantidad de clientes por cada canal:</h2>
+    <button (click)="clientesPorCadaCanal()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>Canal</th>
+                <th>Cantidad de clientes</th>
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item._id}}</td>
+                <td>{{item.cantidad}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

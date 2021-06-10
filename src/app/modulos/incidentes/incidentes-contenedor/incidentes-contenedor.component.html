@@ -1,19 +1,4 @@
 <div style="max-width: 1000px;" class="center">
     <h1>Lista de Desperfectos</h1>
-    
-    <div class="container">
-        <h2>Cantidad por Localidad</h2>
-        <div class="card">
-            <table style="width: 100%;">
-                <tr>
-                    <th>Lugares</th>
-                    <th>Cada cuanto</th>
-                </tr>
-                <tr *ngFor="let ticket of listaTickets">
-                    <td>{{ticket._id}}</td>
-                    <td>{{ticket.cantidadTickets}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    <app-desperfectos-por-localidades></app-desperfectos-por-localidades>
 </div>

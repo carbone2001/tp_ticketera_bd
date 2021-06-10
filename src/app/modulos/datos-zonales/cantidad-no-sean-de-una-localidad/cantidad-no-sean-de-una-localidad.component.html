@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Cantidad de empleados que nos sean de una localidad: {{cantidad}}</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Localidad: </label>
+        <button (click)="localidad = 'Avellaneda'" [class]="localidad == 'Avellaneda' ? 'btn margin active' : 'btn margin'">Avellaneda</button>
+        <button (click)="localidad = 'CABA'" [class]="localidad == 'CABA' ? 'btn margin active' : 'btn margin'">CABA</button>
+    </div>
+    <br>
+    <br>
+    <button (click)="buscar()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+</div>

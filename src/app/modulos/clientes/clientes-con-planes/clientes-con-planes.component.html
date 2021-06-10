@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Clientes con plan especifico:</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Plan: </label>
+        <button (click)="AgregarQuitarElemento('Normal')" [class]="Contiene('Normal') ? 'btn margin active' : 'btn margin'">Normal</button>
+        <button (click)="AgregarQuitarElemento('SuperPack1')" [class]="Contiene('SuperPack1') ? 'btn margin active' : 'btn margin'">SuperPack1</button>
+        <!-- <button (click)="AgregarQuitarElemento('SuperPackFull')" [class]="Contiene('SuperPackFull') ? 'btn margin active' : 'btn margin'">SuperPackFull</button> -->
+    </div>
+    
+    <br>
+    <br>
+    <button (click)="clientesConPlanes()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Planes</th>
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+                <td>{{item.planes}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

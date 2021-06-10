@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Clientes a cierta distancia de una localidad:</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Localidad: </label>
+        <button (click)="localidad = 'Avellaneda'" [class]="localidad == 'Avellaneda' ? 'btn margin active' : 'btn margin'">Avellaneda</button>
+        <button (click)="localidad = 'Palermo'" [class]="localidad == 'Palermo' ? 'btn margin active' : 'btn margin'">Palermo</button>
+    </div>
+    <br>
+    <br>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Distancia: </label>
+        <button (click)="distancia = 1000" [class]="distancia == 1000 ? 'btn margin active' : 'btn margin'">1000</button>
+        <button (click)="distancia = 2000" [class]="distancia == 2000 ? 'btn margin active' : 'btn margin'">2000</button>
+        <button (click)="distancia = 10000" [class]="distancia == 10000 ? 'btn margin active' : 'btn margin'">10000</button>
+    </div>
+    <br>
+    <br>
+    <button (click)="buscar()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item.dni}}</td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

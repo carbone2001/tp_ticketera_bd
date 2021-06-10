@@ -8,7 +8,7 @@ import { ClientesModule } from './modulos/clientes/clientes.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
-import { LoginComponent } from './componentes/login/login.component';
+//import { LoginComponent } from './componentes/login/login.component';
 import { TicketModule } from './modulos/ticket/ticket.module';
 import { EmpleadosModule } from './modulos/empleados/empleados.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    LoginComponent
+    //LoginComponent
   ],
   imports: [
     BrowserModule,

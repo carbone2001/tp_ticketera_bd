@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Empleados que sean de un area:</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Servicio: </label>
+        <button (click)="area = 'Servicio Tecnico'" [class]="area == 'Servicio Tecnico' ? 'btn margin active' : 'btn margin'">Servicio Técnico</button>
+        <button (click)="area = 'Atencion al Cliente'" [class]="area == 'Atencion al Cliente' ? 'btn margin active' : 'btn margin'">Atención al Cliente</button>
+        <button (click)="area = 'Servicios Financieros'" [class]="area == 'Servicios Financieros' ? 'btn margin active' : 'btn margin'">Servicios Financieros</button>
+    </div>
+    <br>
+    <br>
+    <button (click)="buscar()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="lista" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <tr *ngFor="let item of lista">
+                <td>{{item.dni}}</td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

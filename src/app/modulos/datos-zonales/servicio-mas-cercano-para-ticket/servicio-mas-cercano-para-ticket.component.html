@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Servicio Mas Cercano Para Ticket</h2>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">Servicio: </label>
+        <button (click)="servicioMasCercanoTicket.area = 'Servicio Tecnico'" [class]="servicioMasCercanoTicket.area == 'Servicio Tecnico' ? 'btn active margin' : 'btn margin'">Servicio Tecnico</button>
+        <button (click)="servicioMasCercanoTicket.area = 'Atencion al Cliente'" [class]="servicioMasCercanoTicket.area == 'Atencion al Cliente' ? 'btn active margin' : 'btn margin'">Atencion al Cliente</button>
+    </div>
+    <br>
+    <br>
+    <div style="display: inline;">
+        <label class="lbl-titulo-lista">DNI del cliente del Ticket: </label>
+        <button (click)="servicioMasCercanoTicket.dni = 19035659" [class]="servicioMasCercanoTicket.dni == 19035659 ? 'btn active margin' : 'btn margin'" class="btn">19035659</button>
+        <button (click)="servicioMasCercanoTicket.dni = 20035659" [class]="servicioMasCercanoTicket.dni == 20035659 ? 'btn active margin' : 'btn margin'" class="btn">20035659</button>
+
+    </div>
+    <br>
+    <br>
+    <button (click)="servicioMasCercanoParaTicket()" class="btn" style="width: 50%;position: relative;">Buscar</button>
+    <br>
+    <br>
+    <div *ngIf="listaServicioMasCercanoParaTicket" class="card">
+        <table style="width: 100%;">
+            <tr>
+                <th>Sucursal</th>
+                <th>Direccion</th>
+            </tr>
+            <tr *ngFor="let item of listaServicioMasCercanoParaTicket">
+                <td>{{item.localizacion.localidad.descripcion}}</td>
+                <td>{{item.localizacion.direccion.calle}} {{item.localizacion.direccion.altura}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

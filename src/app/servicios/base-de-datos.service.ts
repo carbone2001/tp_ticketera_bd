@@ -5,8 +5,8 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 })
 export class BaseDeDatosService {
   //private headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
-  //private urlBase = "https://tp-ticketera.herokuapp.com/";
-  private urlBase = "http://localhost:8080/";
+  private urlBase = "https://tp-ticketera.herokuapp.com/";
+  //private urlBase = "http://localhost:8080/";
   private constructor(
     private http:HttpClient
   ) { }
